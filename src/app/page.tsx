@@ -1,103 +1,174 @@
-import Image from "next/image";
+import ConfirmForm from "./components/ConfirmForm";
+import CountdownSection from "./components/CountdownSection";
+import NavigationButtonSection from "./components/NavigationButtonSection";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    return (
+        <div className="main-container">
+            <div className="content-container">
+                <div className="@max-xs: p-4 ">
+                    <img src={'/logo/logo.svg'} alt="logo" className="w-full h-96" />
+                    <h1 className="font-calista text-4xl mt-2 text-center">
+                        Mariela & Gerardo
+                    </h1>
+                </div>
+                <div className="flex items-center justify-center">
+                    <img src={'/couple.jpg'} alt="couple" className="h-64 w-64 object-center rounded-full" />
+                </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+                <div className="flex items-center justify-center flex-col pt-8 pb-8 gap-2">
+                    <img src="/rings.svg" alt="rings" className="w-12 opacity-50" />
+                    <div className="px-4 flex flex-col items-end">
+                        <h6 className="font-carves text-xl text-center">
+                            “Por encima de todo, vístanse de amor, que es el vínculo perfecto”.
+                        </h6>
+                        <span className="font-nexa-extra-light text-md">
+                            Colosenses 3:14
+                        </span>
+                    </div>
+                    <div className="pt-4">
+                        <h2 className="font-calista text-3xl text-secondary-500 opacity-80 text-center">
+                            Tenemos el honor de invitarles a celebrar nuestro matrimonio.
+                        </h2>
+                        <div className="flex gap-2 row-auto border-t-sky-900 border-b-sky-900 border-t-2 border-b-2 mt-2 mb-2 pt-2 pb-2 items-center justify-center mx-6">
+                            <h2 className="font-carves text-3xl">
+                                Sabado
+                            </h2>
+                            <h2 className="font-carves text-5xl text-secondary-500">
+                                24
+                            </h2>
+                            <h2 className="font-carves text-3xl">
+                                Mayo
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <CountdownSection />
+
+                <div className="p-8">
+                    <div className="flex flex-col items-center gap-8 justify-center ">
+                        <img src="/pin.svg" alt="map" className="w-12 " />
+                        <div>
+                            <h2 className="font-calista text-4xl text-center">
+                                Detalles del evento
+                            </h2>
+                            <h4 className="font-nexa-extra-light text-xl text-center">
+                                Conoce los detalles sobre la ceremonia y recepción.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-8">
+                    <div className="flex flex-col items-center gap-8 justify-center ">
+                        <div className="flex flex-col gap-8 items-center">
+                            <h2 className="font-calista text-4xl text-center">
+                                Ceremonia
+                            </h2>
+                            <img src="/church.svg" alt="map" className="w-24" />
+                            <div>
+                                <h4 className="font-nexa-heavy text-xl text-center">
+                                    Parroquia Corazón de María
+                                </h4>
+                                <h5 className="font-nexa-extra-light text-lg text-center">
+                                    79 Avenida Sur #200, Colonia Escalón, San Salvador.
+                                </h5>
+                                <h5 className="font-carves text-2xl text-center">
+                                    4:00 PM
+                                </h5>
+                            </div>
+                            <NavigationButtonSection
+                                googleMapsLink="https://maps.app.goo.gl/xQV8hTCfvumkSEBm6"
+                                wazeLink="https://ul.waze.com/ul?place=ChIJ__kd6TwwY48RMEcqjojE5VE&ll=13.70085970%2C-89.23602210&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-8">
+                    <div className="flex flex-col items-center gap-8 justify-center ">
+                        <div className="flex flex-col gap-8 items-center">
+                            <h2 className="font-calista text-4xl text-center">
+                                Recepción
+                            </h2>
+                            <img src="/cheers.svg" alt="map" className="w-24" />
+                            <div>
+                                <h4 className="font-nexa-heavy text-xl text-center">
+                                    Sala de eventos Los Laureles
+                                </h4>
+                                <h5 className="font-nexa-extra-light text-lg text-center">
+                                    Prolongación Alameda Juan Pablo II, Senda los Laureles, San Salvador.
+                                </h5>
+                                <h5 className="font-carves text-2xl text-center">
+                                    7:00 PM
+                                </h5>
+                            </div>
+                            <NavigationButtonSection
+                                googleMapsLink="https://maps.app.goo.gl/BAqiRpGbPLDY2FUh8"
+                                wazeLink="https://ul.waze.com/ul?place=ChIJO0uVZR0wY48ROXtPhvfnuBE&ll=13.70978040%2C-89.22941020&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-8">
+                    <div className="flex flex-col items-center gap-8 justify-center ">
+                        <div className="flex flex-col gap-8 items-center">
+                            <h2 className="font-calista text-4xl text-center">
+                                Dress Code
+                            </h2>
+                            <img src="/dresscode.svg" alt="map" className="w-44" />
+                            <div>
+                                <h4 className="font-nexa-heavy text-xl text-center">
+                                    Vestimenta formal
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-8">
+                    <div className="flex flex-col items-center gap-8 justify-center ">
+                        <div className="flex flex-col gap-8 items-center">
+                            <h4 className="font-nexa-heavy text-xl text-center">
+                                Deseamos que todos disfruten al maximo de la fiesta de matrimonio y es por eso que decidimos
+                                que solo sea para adultos.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="p-8">
+                    <div className="flex flex-col items-center gap-8 justify-center ">
+                        <div className="flex flex-col gap-8 items-center">
+                            <h2 className="font-calista text-4xl text-center">
+                                Mesa de regalos
+                            </h2>
+                            <img src="/gift.svg" alt="map" className="w-32" />
+                            <div>
+                                <h5 className="font-nexa-extra-light text-lg text-center">
+                                    Contar contigo en nuestra boda es el mejor regalo, pero si deseas tener un detalle con nosotros.
+                                </h5>
+                                <h4 className="font-nexa-heavy text-xl text-center">
+                                    Agradecemos regalo de sobre, mesa de regalo Siman; para empezar nuestra vida juntos.
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-white">
+                    <div className="p-8">
+                        <h2 className="font-calista text-4xl text-center">
+                            Nos acompañarias?
+                        </h2>
+                        <h5 className="font-nexa-extra-light text-lg text-center">
+                            Por favor confirma tu asistencia antes del 4 de mayo, con tu nombre completo.
+                        </h5>
+                    </div>
+                    <ConfirmForm />
+                </div>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }

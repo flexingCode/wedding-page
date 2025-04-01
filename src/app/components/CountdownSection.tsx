@@ -5,10 +5,10 @@ import { Countdown } from './Countdown';
 
 const CountdownSection = () => {
     const theBigDay = moment('2025-05-24');
-    const [leftDays, setLeftDays] = useState(theBigDay.diff(moment(), 'days'));
-    const [leftHours, setLeftHours] = useState(theBigDay.diff(moment(), 'hours'));
-    const [leftMinutes, setLeftMinutes] = useState(theBigDay.diff(moment(), 'minutes'));
-    const [leftSeconds, setLeftSeconds] = useState(theBigDay.diff(moment(), 'seconds'));
+    const [leftDays, setLeftDays] = useState(0);
+    const [leftHours, setLeftHours] = useState(0);
+    const [leftMinutes, setLeftMinutes] = useState(0);
+    const [leftSeconds, setLeftSeconds] = useState(0);
 
     const updateTimer = () => {
         const now = moment();
@@ -26,12 +26,13 @@ const CountdownSection = () => {
     };
 
     useEffect(() => {
+        updateTimer(); // Actualizar inmediatamente al montar
         const timer = setInterval(updateTimer, 1000);
         return () => clearInterval(timer);
     }, []);
 
     return (
-        <div className="bg-primary-100 p-8">
+        <div className="bg-primary-100 p-4">
             <h2 className="font-calista text-4xl text-white text-center">
                 Solo faltan. . .
             </h2>

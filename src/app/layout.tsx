@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   icons:{
     icon: "/rings.ico"
   },
-  title: "Gerardo & Mariel",
-  description: "Gerardo & Mariel",
+  title: "Gerardo & Mariela",
+  description: "Gerardo & Mariela",
 };
 
 export default function RootLayout({

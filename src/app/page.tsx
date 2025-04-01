@@ -136,7 +136,7 @@ export default function Home() {
                     <div className="flex flex-col items-center gap-8 justify-center ">
                         <div className="flex flex-col gap-8 items-center">
                             <h4 className="font-nexa-heavy text-xl text-center">
-                                Deseamos que todos disfruten al maximo de la fiesta de matrimonio y es por eso que decidimos
+                                Deseamos que todos disfruten al máximo de la fiesta de matrimonio y es por eso que decidimos
                                 que solo sea para adultos.
                             </h4>
                         </div>

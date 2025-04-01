@@ -1,10 +1,9 @@
+import Image from "next/image";
 import { memo } from "react";
 import ConfirmForm from "./components/ConfirmForm";
 import CountdownSection from "./components/CountdownSection";
 import NavigationButtonSection from "./components/NavigationButtonSection";
-import { IconButton } from "./components/IconButton";
 import { RedirectButton } from "./components/RedirectButton";
-import Image from "next/image";
 
 const CountdownSectionMemo = memo(CountdownSection);
 export default function Home() {

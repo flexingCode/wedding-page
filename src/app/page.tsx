@@ -17,7 +17,7 @@ export default function Home() {
                     </h1>
                     <div className="px-4 flex flex-col items-end mt-4">
                         <h6 className="font-carves text-xl text-center text-gray-600">
-                            “Por encima de todo, vístanse de amor, que es el vínculo perfecto”.
+                            "Por encima de todo, vístanse de amor, que es el vínculo perfecto".
                         </h6>
                         <span className="font-nexa-extra-light text-md">
                             Colosenses 3:14
@@ -166,8 +166,20 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="relative">
-                    <Image src="/formbg.jpg" alt="formbg" className="w-full h-full object-cover absolute" width={1000} height={1000} />
-                    <div className="p-8 w-full h-full  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-80">
+                    <Image 
+                        src="/formbg.jpg" 
+                        alt="formbg" 
+                        className="w-full h-full object-cover absolute" 
+                        width={1000} 
+                        height={1000} 
+                        priority
+                    />
+                    {/* Capa de fondo con fallback para navegadores que no soportan backdrop-filter */}
+                    <div className="absolute inset-0 bg-gray-100/10" />
+                    {/* Capa con backdrop-filter para navegadores modernos */}
+                    <div className="absolute inset-0 backdrop-blur-md" />
+                    {/* Contenido */}
+                    <div className="relative p-8 w-full h-full">
                         <h2 className="font-calista text-4xl text-center">
                             Nos acompañarias?
                         </h2>
@@ -176,7 +188,6 @@ export default function Home() {
                         </h5>
                         <ConfirmForm />
                     </div>
-
                 </div>
             </div>
         </div>

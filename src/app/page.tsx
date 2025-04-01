@@ -105,7 +105,7 @@ export default function Home() {
                                     Prolongación Alameda Juan Pablo II, Senda los Laureles, San Salvador.
                                 </h5>
                                 <h5 className="font-carves text-2xl text-center">
-                                    7:00 PM
+                                    6:00 PM
                                 </h5>
                             </div>
                             <NavigationButtonSection

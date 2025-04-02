@@ -17,7 +17,7 @@ export default function Home() {
                     </h1>
                     <div className="px-4 flex flex-col items-end mt-4">
                         <h6 className="font-carves text-xl text-center text-gray-600">
-                            "Por encima de todo, vístanse de amor, que es el vínculo perfecto".
+                            &ldquo; Por encima de todo, vístanse de amor, que es el vínculo perfecto &rdquo;.
                         </h6>
                         <span className="font-nexa-extra-light text-md">
                             Colosenses 3:14

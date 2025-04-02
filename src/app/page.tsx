@@ -165,21 +165,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="relative">
-                    <Image 
-                        src="/formbg.jpg" 
-                        alt="formbg" 
-                        className="w-full h-full object-cover absolute" 
-                        width={1000} 
-                        height={1000} 
-                        priority
-                    />
-                    {/* Capa de fondo con fallback para navegadores que no soportan backdrop-filter */}
-                    <div className="absolute inset-0 bg-gray-100/10" />
-                    {/* Capa con backdrop-filter para navegadores modernos */}
-                    <div className="absolute inset-0 backdrop-blur-md" />
-                    {/* Contenido */}
-                    <div className="relative p-8 w-full h-full">
+                <div >
+                    <div className="p-8 w-full h-full bg-white" >
                         <h2 className="font-calista text-4xl text-center">
                             Nos acompañarias?
                         </h2>

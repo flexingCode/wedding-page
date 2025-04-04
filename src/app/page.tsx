@@ -158,6 +158,7 @@ export default function Home() {
                                     Agradecemos regalo de sobre, mesa de regalo Siman; para empezar nuestra vida juntos.
                                 </h4>
                             </div>
+                            
                             <RedirectButton
                                 redirect="https://simangiftregistry.web.app/table/10007754"
                                 label="Mesa de regalos"

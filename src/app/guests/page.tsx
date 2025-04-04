@@ -1,4 +1,3 @@
-import Guest from "@/models/guest";
 import GuestList from "./GuestList";
 
 

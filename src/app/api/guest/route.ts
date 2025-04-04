@@ -5,8 +5,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
     db.connectDB();
     const allGuests = await Guest.find({});
-    console.log("All guests");
-    console.log(allGuests);
+
     return NextResponse.json({
         message: "All guests",
         data: allGuests,

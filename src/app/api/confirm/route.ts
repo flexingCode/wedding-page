@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     db.connectDB();
     const { email, name } = await request.json();
 
-    if (email !== "" || email !== null) {
+    if (email !== "") {
         const guest = await Guest.findOne({ email });
 
         if (guest) {
